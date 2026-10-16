@@ -1,0 +1,54 @@
+{
+    "name": "imrandevbd/tarikh",
+    "description": "A modern, immutable, Laravel-native date/time toolkit with built-in South Asian calendar, holiday, and locale support.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Imran Dev BD",
+            "email": "me@imrandev.bd",
+            "homepage": "https://imrandev.bd",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-intl": "*"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^1.10",
+        "laravel/pint": "^1.13"
+    },
+    "suggest": {
+        "illuminate/support": "Required to use the Laravel integration (^10.0|^11.0).",
+        "illuminate/database": "Required for Eloquent casting (^10.0|^11.0)."
+    },
+    "autoload": {
+        "psr-4": {
+            "Tarikh\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tarikh\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tarikh\\Laravel\\TarikhServiceProvider"
+            ],
+            "aliases": {
+                "Tarikh": "Tarikh\\Laravel\\Facades\\Tarikh"
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
